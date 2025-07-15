@@ -3,8 +3,8 @@
 <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
 
-<h1>osTicket - Post-Install Configuration</h1>
-This tutorial outlines the post-install configuration of the open-source help desk ticketing system osTicket.<br />
+<h1>osTicket - Ticket Lifecycle: Intake Through Resolution</h1>
+This tutorial outlines the lifecycle of a ticket from intake to resolution within the open-source help desk ticketing system osTicket.<br />
 
 <h2>Environments and Technologies Used</h2>
 
@@ -14,256 +14,157 @@ This tutorial outlines the post-install configuration of the open-source help de
 
 <h2>Operating Systems Used </h2>
 
-- Windows 10</b> (22H2)
+- Windows 10</b> (21H2)
 
-<h2>Post-Install Configuration Objectives</h2>
+<h2>Ticket Lifecycle Stages</h2>
 
-- Configure: Roles, Departments, and Teams
-- SLA Levels
-- Agent Permissions
-- User Access
-- Basic Help Topics (Internal use only)
+- Intake
+- Assignment and Communication
+- Working the Issue
+- Resolution
 
+<h2>Lifecycle Stages</h2>
 
-<h2>Configuration Steps</h2>
-
+<h3>Ticket 1</h3>
+<p><b>This first example will also function as a partial tutorial to show the dialog menus and the proper responses contained within each interaction.</b></p>
 <p>
-<img src="https://imgur.com/ypBQ1jf.png" height="80%" width="80%" alt="osTicket login"/>
+<img src="https://imgur.com/PjUibby.png" height="80%" width="80%" alt="Open ticket">
 </p>
 <p>
-Once all installation steps and requsites have been installed, login to osTicket at: http://localhost/osTicket/scp/login.php
-</p>
-<br />
-
-<p>
-<img src="https://imgur.com/jYA8H8a.png" height="80%" width="80%" alt="Admin panel"/>
-</p>
-<p>
-From the main screen select the "Admin Panel" to start configuring osTicket.
+To simulate a user submitting a ticket, navigate to localhost/osTicket/, and click "Open a New Ticket".
 </p>
 <br />
 
 <p>
-<img src="https://imgur.com/Ht64bpf.png" height="80%" width="80%" alt="Add Roles"/>
+<img src="https://imgur.com/KCnI5z4.png" height="80%" width="80%" alt="Ticket information">
 </p>
 <p>
-Within Admin Panel, navigate to Agents -> Roles -> Add New Role. 
+Manager karen has had reports of issues with online banking and is opening a ticket. (Not all information a user provides may be correct, e.g., Help topic: Report a Problem, the more appropriate would be: Report a Problem / Business Critical Outage)
 </p>
 <br />
 
 <p>
-<img src="https://imgur.com/pqEtT8v.png" height="80%" width="80%" alt="Supreme Admin"/>
+<img src="https://imgur.com/R4E8fHE.png" height="80%" width="80%" alt="Ticket unedited">
 </p>
 <p>
-Create the role "Supreme Admin" and enable all permissions within the "Permissions" tab. Once configured, select "Add Role".
+This is how the ticket would first appear to a help desk agent prior to assigning it to the correct team (if applicable).
+
+<b>Let's update the ticket information so the appropriate team handles the issue.</b>
 </p>
 <br />
 
 <p>
-<img src="https://imgur.com/e78dMEu.png" height="80%" width="80%" alt="Add Department"/>
+<img src="https://imgur.com/3I4ZFqd.png" height="80%" width="80%" alt="SLA update">
 </p>
 <p>
-Navigate back to the main "Agents" tab and select Departments -> "Add New Department".
+First, update the SLA to the appropriate severity level. (Sev-A)
 </p>
 <br />
 
 <p>
-<img src="https://imgur.com/kQHIXHB.png" height="80%" width="80%" alt="SysAdmins"/>
+<img src="https://imgur.com/9AdrAgT.png" height="80%" width="80%" alt="Help Topic update">
 </p>
 <p>
-No need to edit any settings, simply set name to "SysAdmins" and select "Create Dept".
-
-<b>Attention: Tickets will be auto-assigned to the "Maintenance" department, Select it and under "more" select "Delete" to avoid any issues. </b>
+Next, the help topic so the proper support team knows the scope of work it may entail. 
 </p>
 <br />
 
 <p>
-<img src="https://imgur.com/xfBy5q5.png" height="80%" width="80%" alt="Create Team"/>
+<img src="https://imgur.com/JDG06lJ.png" height="80%" width="80%" alt="Team update">
 </p>
 <p>
-Back in main "Agents" tab, navigate to Teams -> "Add New Team".
+Finally, assign the ticket to the correct team so they can start addressing the issue.
+
+<b>Assigning the team last will make sure you can make all the proper adjustments to the ticket before potentially losing access (only if you do not have access to tickets from the team your assigning it to).</b>
 </p>
 <br />
 
 <p>
-<img src="https://imgur.com/63KMfKv.png" height="80%" width="80%" alt="Online Banking"/>
+<img src="https://imgur.com/P51eTDg.png" height="80%" width="80%" alt="Updated Ticket">
 </p>
 <p>
-Create a new team with the name "Online Banking", select "Create Team".
+This is an updated view of the ticket, all the information has been updated and also the timeline of all edits made to the ticket.
 </p>
 <br />
 
 <p>
-<img src="https://imgur.com/TWNIjjS.png" height="80%" width="80%" alt="Add Agents"/>
+<img src="https://imgur.com/SCCHsqY.png" height="80%" width="80%" alt="Self assignment">
 </p>
 <p>
-Within main "Agents", Agents -> "Add New Agent". This is where you add team members that will access the osTicket program and be able to intract with tickets submitted to the system. For our purposes we will be creating two agents, one being support and one being an Administrator.
+Once a ticket has been reassigned to the correct support team, the team takes over to work the ticket. An individual on the team will usually get it assigned to them or take the assignment themselves so it can be tracked under their name.
 </p>
 <br />
 
 <p>
-<img src="https://imgur.com/0K9gGRK.png" height="80%" width="80%" alt="New agent Credentials"/>
+<img src="https://imgur.com/3ohD2gM.png" height="80%" width="80%" alt="Working the ticket">
 </p>
 <p>
-Create two Agents. 
-First agent's credentials:
-  
-Name: Jane Smith
-
-Email: jane@email.com
-
-Username: jane
-
-Second agent's credentials:
-
-Name: Jacob West
-
-Email: jacob@email.com
-
-Username: jacob
-
-Follow next steps to set password and permissions for agent.
+As the suppoort member intracts with the user and resolves the ticket, they will send updates in accordance with the SLA type. These updates and interactions will be saved in in the timeline history of the ticket.
 </p>
 <br />
 
 <p>
-<img src="https://imgur.com/mEK729I.png" height="80%" width="80%" alt="Set Password"/>
+<img src="https://imgur.com/POqDVuc.png" height="80%" width="80%" alt="Ticket resolution">
 </p>
 <p>
-Within the "Add New Agent" menu, select "Set Password" and uncheck "Send the agent a password reset email", Enter "Password1" for both boxes and agents.
+Upon completion of the ticket it will need to be closed or resolved. Resolved is always the preferable outcome, on occasion, closing may be preferable. 
 
-  Also, uncheck "Require password change at next login" for ease of use. Once passwords match select "Set".
+When there's been no response from the user after multiple attempts to contact them, the issue is deemed a duplicate or spurious, or when the user indicates the issue is resolved but doesn't explicitly confirm resolution by closing the ticket. Closing would be prefferable. 
+</p>
+<br />
+
+<h3>Ticket 2</h3>
+<p>
+<img src="https://imgur.com/buk1dqJ.png" height="80%" width="80%" alt="Ticket 2 open">
+</p>
+<p>
+This ticket has already been created from the accounting team. Since there is only one other team, "Online Banking", this will be handled by the support team. Your support user can open it up and properly assign and work the ticket.
 </p>
 <br />
 
 <p>
-<img src="https://imgur.com/n6mawYC.png" height="80%" width="80%" alt="Agent Access">
+<img src="https://imgur.com/gVejj9X.png" height="80%" width="80%" alt="Ticket 2 assign">
 </p>
 <p>
-Under the "Access" tab for agent Jane set: 
-  
-Department: SysAdmins 
+Notice how all applicable fields have beeen updated. Support agent Jacob did his due diligence prior to SLA assignment this time (not typical but can save time in some scenarios). 
 
-Role: Supreme Admin
+After contacting the user experiencing the problem, he was able to decern an apropriate SLA for the ticket. Gathering this information allowed Jacob to hone his scope of work down from an entire team experiencing the issue to finding out it was only two devices. 
 
-for agent Jacob:
-
-Department: Support
-
-Role: Expanded Access
+Jacob also kept open communication with the ticket, properly setting a time for follow up to address the issue further if necessary. This would allow for his work load to not be held up by one single ticket.
 </p>
 <br />
 
 <p>
-<img src="https://imgur.com/azyRmTL.png" height="80%" width="80%" alt="Agent Teams">
+<img src="https://imgur.com/we0d1Dn.png" height="80%" width="80%" alt="Ticket Resolution">
 </p>
 <p>
-Under the "Teams" tab for agent Jane, select "Online Banking" and click "Add". Jacob will not be in a team. Once agent configuration is complete, select "Create".
+Due to Support agent Jacob solving the issue he was able to resolve the ticket and close out.
+</p>
+<br />
+ <h3>Ticket 3 - Closed</h3>
+<p>
+<img src="https://imgur.com/7XKVTpl.png" height="80%" width="80%" alt="Navigate to closed tickets">
+</p>
+<p>
+Sometimes a problem could recieve multiple tickets, or a common issue may arise often. In these cases being able to go back and assess how the issue was resolved previously can assist in working new tickets. By navigating to a closed ticket, we can view useful information about it.
 </p>
 <br />
 
 <p>
-<img src="https://imgur.com/ApvqKxf.png" height="80%" width="80%" alt="Create SLAs">
+<img src="https://imgur.com/OX0wYBT.png" height="80%" width="80%" alt="Closed ticket">
 </p>
 <p>
-Open the "Manage" tab, navigate to SLA -> "Add New SLA Plan".
+As shown, this is a resolved ticket that was closed out by Support agent "Jacob West". The same as if you were working the ticket you can see all the information about the timeline, SLA level, Help Topic, and the agents that interacted with the ticket.
 </p>
 <br />
 
 <p>
-<img src="https://imgur.com/0DVS5Ar.png" height="80%" width="80%" alt="SLA Config">
+<img src="https://imgur.com/cgi5t7X.png" height="80%" width="80%" alt="Link tickets">
 </p>
 <p>
-Create three new SLA plans:
-  
-Plan "Sev-A":
+If a reported issue is persistent after an initial ticket was closed or resolved, it may be useful to merge or link the previous ticket to a new one. 
 
-Grace Period: 1 hour
+Merging will make the tickets history combine with the new one, this can be useful but can cause confusion if the dates of the tickets span a large amount of time. 
 
-Schedule: 24/7
-
-Plan "Sev-B":
-
-Grace Period: 4 Hours
-
-Schedule: 24/7
-
-Plan "Sev-C":
-
-Grace Period: 8 Hours
-
-Schedule: 24/5 (Business Hours)
+To avoid confusion and clarify that new or different work has been done on an old issue. Linking tickets will allow keeping seperate "histories" of the tickets but will associate them together for easy access and referencing in the future.
 </p>
-<br />
-
-<p>
-<img src="https://imgur.com/dQgZ2Pg.png" height="80%" width="80%" alt="SLA List">
-</p>
-<p>
-SLA plans should show up the same as displayed above.
-</p>
-<br />
-
-<p>
-<img src="https://imgur.com/pjj10qB.png" height="80%" width="80%" alt="Add Help Topics">
-</p>
-<p>
-Navigate to Help Topics -> "Add New Help Topic".
-</p>
-<br />
-
-<p>
-<img src="https://imgur.com/nTNxi4P.png" height="80%" width="80%" alt="Help Topic Config">
-</p>
-<p>
-Create five new help topics.
-  
-"Help Topic" -> "Parent Topic"
-
-Business Critical outage ->  Report a Problem
-
-Personal Computer Issues->  Report a Problem
-
-Password Reset->  Report a Problem
-
-Equipment Request-> General Inquiry
-
-Other-> General Inquiry
-
-No other settings need adjusted for the sake of this tutorial. 
-</p>
-<br />
-
-<p>
-<img src="https://imgur.com/zTdx9oF.png" height="80%" width="80%" alt="Complete Help Topics">
-</p>
-<p>
-Verify that all help topics show up as displayed above.
-</p>
-<br />
-
-<p>
-<img src="https://imgur.com/1enADKu.png" height="80%" width="80%" alt="Agent Panel">
-</p>
-<p>
-Navigate back to the "Agent Panel" on the top right of the screen. 
-</p>
-<br />
-
-<p>
-<img src="https://imgur.com/KAmsxY4.png" height="80%" width="80%" alt="New User">
-</p>
-<p>
-Go to Users -> "Add User".
-</p>
-<br />
-
-<p>
-<img src="https://imgur.com/EkO8t2h.png" height="80%" width="80%" alt="">
-</p>
-<p>
-Enter email and name (e.g., karen: karen@email.com), select "Add User".
-
-This is the end of configuration for osTicket. In the next repository we will be utilizing everything we just made to make tickets and mock a typical ticket lifecycle.
-</p>
-<br />
